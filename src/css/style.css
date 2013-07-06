@@ -20,7 +20,7 @@ body:before {
 	left: 0;
 	width: 100%;
 	height: 10px;
-	background-image: url(../images/bg_aside.png);
+	background: #665d4e url(../images/bg_aside.png);
 	-webkit-box-shadow:  0 0 4px #bda689;
 	-moz-box-shadow:  0 0 4px #bda689;
 	box-shadow:  0 0 4px #bda689;
@@ -354,7 +354,7 @@ a:active {
 .footer {
 	color: #bab9b3;
 	font-size: 13px;
-	background: #fcfaf0 url(../images/bg_aside.png);
+	background: #665d4e url(../images/bg_aside.png);
 	padding: 30px 0;
 	margin-top: 80px;
 	-webkit-box-shadow:  0 0 4px #bda689;
