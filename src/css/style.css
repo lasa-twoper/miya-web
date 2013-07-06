@@ -127,11 +127,6 @@ a:active {
 	width: 100%;
 	padding: 40px 0;
 }
-@media screen and (min-width:640px) {
-	.header {
-		display: table;
-	}
-}
 /* Logo
 ------------------------------------------------------------ */
 .logo {
@@ -414,6 +409,7 @@ a:active {
 ------------------------------------------------------------ */
 .tweet {
 	position: relative;
+	display: none;
 	padding-left: 40px;
 }
 .tweet:before {
@@ -426,9 +422,9 @@ a:active {
 	width: 10px;
 	height: 200px;
 }
-@media screen and (max-width:768px) {
+@media screen and (min-width:640px) {
 	.tweet {
-		display: none !important;
+		display: block !important;
 	}
 }
 /* Copyright
