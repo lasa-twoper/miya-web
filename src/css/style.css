@@ -1,0 +1,439 @@
+@charset "UTF-8";
+/*
+ * File Name: style.css
+ * Description: サイト固有のスタイルを定義します。
+ * -------------------------------------------------- */
+
+/*
+ Base
+-------------------------------------------------------------------------------- */
+body {
+	position: relative;
+	color: #606060;
+	font: 14px/1.231 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+	background: #fcfaf0 url(../images/bg.png);
+}
+body:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 10px;
+	background-image: url(../images/bg_aside.png);
+	-webkit-box-shadow:  0 0 4px #bda689;
+	-moz-box-shadow:  0 0 4px #bda689;
+	box-shadow:  0 0 4px #bda689;
+}
+
+/*
+ Common
+-------------------------------------------------------------------------------- */
+/* Headline
+------------------------------------------------------------ */
+.headline {
+	color: #7c7364;
+	font-family: 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', 'ＭＳ Ｐ明朝', 'MS PMincho';
+}
+h2.headline {
+	font-size: 24px;
+	font-weight: bold;
+	border-bottom: 2px solid #665d4e;
+	padding: 0 0 5px 10px;
+	letter-spacing: .25em;
+}
+h3.headline {
+	font-size: 18px;
+}
+h3.headline:before {
+	content: url(../images/point.png);
+	padding-right: 20px;
+}
+/* List
+------------------------------------------------------------ */
+ol {
+	margin: 20px 0;
+}
+ol li {
+	margin-left: 2em;
+	margin-bottom: 8px;
+	list-style-type: square;
+}
+/* Form
+------------------------------------------------------------ */
+input[type="text"] {
+	color: #7c7364;
+	font-size: 12px;
+	width: 260px;
+	border: 1px solid #ddd1b2;
+	background-color: #fffcf8;
+	padding: 6px 8px;
+	margin: 10px 0;
+	box-shadow: 0 0 3px rgba(189,166,137,.5) inset;
+	-webkit-box-shadow: 0 0 3px rgba(189,166,137,.5) inset;
+	-moz-box-shadow: 0 0 3px rgba(189,166,137,.5) inset;
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+/* Anchor link
+------------------------------------------------------------ */
+a:link, a:visited {
+	color: #7c7364;
+	text-decoration: underline;
+}
+a:hover {
+	color: #bda783;
+	text-decoration: none;
+}
+a:active {
+	color: #e1820b;
+}
+.active a {
+	color: #e1820b;
+}
+/* Thumbnail
+------------------------------------------------------------ */
+.thumbnail {
+	border: solid #fff;
+	box-shadow: 0 0 2px #bda689;
+	-webkit-box-shadow: 0 0 2px #bda689;
+	-moz-box-shadow: 0 0 2px #bda689;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+.thumbnail img {
+	display: block;
+}
+
+/*
+ Outline
+-------------------------------------------------------------------------------- */
+.outline {
+	min-width: 320px;
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+/*
+ Global header
+-------------------------------------------------------------------------------- */
+.header {
+	display: table;
+	width: 100%;
+	padding: 40px 0;
+}
+@media screen and (min-width:640px) {
+	.header {
+		display: table;
+	}
+}
+/* Logo
+------------------------------------------------------------ */
+.logo {
+	float: left;
+	text-align: center;
+}
+/* Navigation
+------------------------------------------------------------ */
+.globalnav {
+	float: right;
+	width: 320px;
+	margin-top: 10px;
+}
+.globalnav a {
+	font-size: 13px;
+	font-family: 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', 'ＭＳ Ｐ明朝', 'MS PMincho';
+	font-weight: bold;
+}
+.globalnav ul {
+	display: table;
+	width: 320px;
+}
+.globalnav li {
+	display: table-cell;
+	text-align: center;
+}
+@media screen and (min-width:640px) {
+	.globalnav {
+		float: none;
+		display: table-cell;
+		vertical-align: middle;
+		margin-left: auto;
+	}
+}
+
+/*
+ Contents
+-------------------------------------------------------------------------------- */
+.contents .bodytext {
+	margin: 0 20px;
+}
+.contents p {
+	margin: 20px 0;
+}
+.contents .section {
+	margin: 40px 0;
+}
+/* Top image
+------------------------------------------------------------ */
+.top-image {
+	margin-bottom: 40px;
+}
+.top-image .thumbnail {
+	position: relative;
+	display: block;
+	border-width: 4px;
+	margin-bottom: 20px;
+}
+.top-image .thumbnail:before {
+	content: "";
+	position: absolute;
+	top: -24px;
+	left: 50%;
+	margin-bottom: -4px;
+	margin-left: -79px;
+	background-image: url(../images/tape.png);
+	width: 158px;
+	height: 48px;
+}
+.top-image .thumbnail:after {
+	content: "";
+	position: absolute;
+	bottom: -10px;
+	left: 50%;
+	margin-bottom: -4px;
+	margin-left: -120px;
+	background-image: url(../images/shadow_image.png);
+	width: 240px;
+	height: 10px;
+}
+.top-image p {
+	text-align: center;
+	margin: 0 10px;
+}
+
+/*
+ Archive
+-------------------------------------------------------------------------------- */
+.archive {
+	display: table;
+}
+.archive-post {
+	background-color: #fffcf6;
+	width: 280px;
+	min-height: 280px;
+	margin: 0 10px 20px;
+	padding: 10px;
+	float: left;
+	box-shadow: 0 0 4px rgba(189,166,137,.5);
+	-webkit-box-shadow: 0 0 4px rgba(189,166,137,.5);
+	-moz-box-shadow: 0 0 4px rgba(189,166,137,.5);
+}
+.archive-post:active {
+	background-color: #f5ebd9;
+	box-shadow: 0 0 4px rgba(189,166,137,.5) inset;
+	-webkit-box-shadow: 0 0 4px rgba(189,166,137,.5) inset;
+	-moz-box-shadow: 0 0 4px rgba(189,166,137,.5) inset;
+}
+/* Archive thumbnail
+------------------------------------------------------------ */
+.archive-post .thumbnail {
+	position: relative;
+	display: block;
+	border-width: 2px;
+	width: 280px;
+	height: 120px;
+	background-size: cover;
+	background-position: center;
+	margin-bottom: 15px;
+}
+.archive-post .thumbnail:after {
+	content: "";
+	position: absolute;
+	bottom: -10px;
+	left: 50%;
+	margin-bottom: -2px;
+	margin-left: -120px;
+	background-image: url(../images/shadow_image.png);
+	width: 240px;
+	height: 10px;
+}
+/* Archive header
+------------------------------------------------------------ */
+.archive-headline {
+	color: #7b7263;
+	font-size: 18px;
+	margin-bottom: 3px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-webkit-text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+}
+.archive-postdate {
+	color: #e1820b;
+	font-size: 12px;
+	font-weight: bold;
+}
+/* Archive bodytext
+------------------------------------------------------------ */
+.archive-post p {
+	color: #606060;
+	font-size: 12px;
+	margin-top: 10px;
+	padding-top: 10px;
+	border-top: 2px solid #665d4e;
+	line-height: 1.5;
+}
+
+/*
+ Galleries
+-------------------------------------------------------------------------------- */
+.galleries {
+	margin: 20px 0 0 20px;
+	letter-spacing: -.40em;
+}
+.galleries a {
+	display: inline-block;
+	border: 2px solid #fff;
+	width: 64px;
+	height: 64px;
+	margin: 0 10px 10px 0;
+	line-height: 0;
+	box-shadow: 0 0 2px rgba(189,166,137,.5);
+	-webkit-box-shadow: 0 0 2px rgba(189,166,137,.5);
+	-moz-box-shadow: 0 0 2px rgba(189,166,137,.5);
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+.galleries a:hover {
+	border-color: #bda783;
+}
+
+/*
+ Social list
+-------------------------------------------------------------------------------- */
+.social li {
+	position: relative;
+	padding-left: 30px;
+	line-height: 2.2;
+}
+.social li:before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 0;
+	margin-top: -10px;
+	background: url(../images/social.png) no-repeat;
+	width: 20px;
+	height: 20px;
+}
+.social .twitter:before {
+	background-position: 0 0;
+}
+.social .facebook:before {
+	background-position: 0 -22px;
+}
+.social .pixiv:before {
+	background-position: 0 -44px;
+}
+.social .creatorz:before {
+	background-position: 0 -66px;
+}
+
+/*
+ Global footer
+-------------------------------------------------------------------------------- */
+.footer {
+	color: #bab9b3;
+	background: #fcfaf0 url(../images/bg_aside.png);
+	padding: 30px 0;
+	margin-top: 80px;
+	-webkit-box-shadow:  0 0 4px #bda689;
+	-moz-box-shadow:  0 0 4px #bda689;
+	box-shadow:  0 0 4px #bda689;
+}
+@media screen and (max-width:320px) {
+	.footer {
+		font-size: 12px;
+	}
+}
+.footer a:link, .footer a:visited {
+	color: #bab9b3;
+}
+.footer a:hover {
+	color: #bda783;
+	text-decoration: none;
+}
+.footer a:active {
+	color: #e1820b;
+}
+.footer .wrapper {
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+	margin-bottom: 40px;
+	padding: 0 10px;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+/* Section
+------------------------------------------------------------ */
+.footer .section {
+	display: table-cell;
+	min-height: 200px;
+}
+/* Headline
+------------------------------------------------------------ */
+.footer-headline {
+	color: #d4d2c5;
+	font-size: 24px;
+	font-family: 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', 'ＭＳ Ｐ明朝', 'MS PMincho';
+	margin-bottom: 20px;
+}
+/* Find me at
+------------------------------------------------------------ */
+.find-me {
+	position: relative;
+	padding-left: 100px;
+}
+.find-me:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: url(../images/profile.png) no-repeat;
+	width: 80px;
+	height: 80px;
+}
+/* Tweet...
+------------------------------------------------------------ */
+.tweet {
+	position: relative;
+	padding-left: 40px;
+}
+.tweet:before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 0;
+	margin-top: -100px;
+	background: url(../images/shadow_footer.png) no-repeat;
+	width: 10px;
+	height: 200px;
+}
+@media screen and (max-width:768px) {
+	.tweet {
+		display: none !important;
+	}
+}
+/* Copyright
+------------------------------------------------------------ */
+.copyright {
+	font-size: 14px;
+	text-align: center;
+}
