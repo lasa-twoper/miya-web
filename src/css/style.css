@@ -388,6 +388,7 @@ input[type="text"] {
 }
 /* // フッターのラッパー要素 */
 .footer .wrapper {
+	position: relative;
 	display: table;
 	table-layout: fixed;
 	width: 100%;
