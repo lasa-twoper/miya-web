@@ -6,7 +6,7 @@ function createArticlePost(data) {
 		imgpath = $(data.content).find("img").attr("src") || imgpath;
 	}
 	var date = new Date(data.publishedDate);
-	var dateString = date.getFullYear() + "." + date.getMonth() + "." + date.getDate() + " " + weekArray[date.getDay()];
+	var dateString = date.getFullYear() + "." + (date.getMonth() + 1) + "." + date.getDate() + " " + weekArray[date.getDay()];
 	var html = '';
 	html += '<section class="archive-post">';
 	html += 	'<i class="thumbnail archive-thumbnail" style="background-image: url(' + imgpath + ');">';
@@ -24,7 +24,7 @@ function createArticlePost(data) {
 $(function() {
 	var container = $("#js-archive-container");
 	var rss = "http://miya-illust.jugem.jp/?mode=rss";
-	var count = 5;
+	var count = 6;
 	var url = "https://ajax.googleapis.com/ajax/services/feed/load?v=1.0&q=" + rss + "&num=" + count;
 	$.ajax(url, {
 		async: true,
