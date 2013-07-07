@@ -1,7 +1,7 @@
 var weekArray = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
 function createArticlePost(data) {
-	var imgpath = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAEElEQVR42gEFAPr/AP///wAI/AL+Sr4t6gAAAABJRU5ErkJggg==";
+	var imgpath = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGAQMAAADaAn0LAAAABlBMVEUAAADq4tjlUicxAAAAAXRSTlMAQObYZgAAABpJREFUeF4NwQENAAAIArBHMgbBCI67invRAQvcAfkcWtJIAAAAAElFTkSuQmCC";
 	if(data.content && data.content.indexOf("img src=") !== -1) {
 		imgpath = $(data.content).find("img").attr("src") || imgpath;
 	}
@@ -9,14 +9,17 @@ function createArticlePost(data) {
 	var dateString = date.getFullYear() + "." + (date.getMonth() + 1) + "." + date.getDate() + " " + weekArray[date.getDay()];
 	var html = '';
 	html += '<section class="archive-post">';
-	html += 	'<i class="thumbnail archive-thumbnail" style="background-image: url(' + imgpath + ');">';
-	html += 		'<img src="images/pix.png" width="276" height="116" alt="">';
-	html += 	'</i>';
-	html += 	'<header>';
-	html += 		'<h2 class="archive-headline">' + data.title + '</h2>';
-	html += 		'<time class="archive-postdate" datetime="' + date.toString() + '">' + dateString + '</time>';
-	html += 	'</header>';
-	html += 	'<p>' + data.contentSnippet + '</p>';
+	html += 	'<a href="' + data.link + '" target="_blank">';
+	html += 		'<i class="thumbnail archive-thumbnail" style="background-image: url(' + imgpath + ');">';
+	html += 			'<img src="images/pix.png" width="276" height="116" alt="">';
+	html += 		'</i>';
+	html += 		'<header>';
+	html += 			'<h2 class="archive-headline">' + data.title + '</h2>';
+	html += 			'<time class="archive-postdate" datetime="' + date.toString() + '">' + dateString + '</time>';
+	html += 		'</header>';
+	html += 		'<p>' + data.contentSnippet + '</p>';
+	html += 		'<div class="archive-more">more&nbsp;&raquo;</div>';
+	html += 	'</a>';
 	html += '</section>';
 	return html;
 }
