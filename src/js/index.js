@@ -3,7 +3,7 @@ var weekArray = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 function createArticlePost(data) {
 	var imgpath = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAEElEQVR42gEFAPr/AP///wAI/AL+Sr4t6gAAAABJRU5ErkJggg==";
 	if(data.content && data.content.indexOf("img src=") !== -1) {
-		imgpath = $(data.content).find("img").attr("src");
+		imgpath = $(data.content).find("img").attr("src") || imgpath;
 	}
 	var date = new Date(data.publishedDate);
 	var dateString = date.getFullYear() + "." + date.getMonth() + "." + date.getDate() + " " + weekArray[date.getDay()];
