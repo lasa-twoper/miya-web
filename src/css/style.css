@@ -27,6 +27,18 @@ body:before {
 }
 
 /*
+ Outline アウトライン
+-------------------------------------------------------------------------------- */
+.outline {
+	min-width: 320px;
+	max-width: 960px;
+	margin: 0 auto;
+}
+.outline-primary {
+	margin-bottom: 80px;
+}
+
+/*
  Common 共通
 -------------------------------------------------------------------------------- */
 /* Anchor link アンカーリンク
@@ -111,18 +123,6 @@ input[type="text"] {
 }
 .thumbnail img {
 	display: block;
-}
-
-/*
- Outline アウトライン
--------------------------------------------------------------------------------- */
-.outline {
-	min-width: 320px;
-	max-width: 960px;
-	margin: 0 auto;
-}
-.outline-primary {
-	margin-bottom: 80px;
 }
 
 /*
