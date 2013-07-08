@@ -2,7 +2,7 @@ var weekArray = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
 function createArticlePost(data) {
 	var imgpath = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGAQMAAADaAn0LAAAABlBMVEUAAADq4tjlUicxAAAAAXRSTlMAQObYZgAAABpJREFUeF4NwQENAAAIArBHMgbBCI67invRAQvcAfkcWtJIAAAAAElFTkSuQmCC";
-	if(data.content && data.content.indexOf("img src=") !== -1) {
+	if(data.content && data.content.indexOf("img") !== -1) {
 		imgpath = $(data.content).find("img").attr("src") || imgpath;
 	}
 	var date = new Date(data.publishedDate);
