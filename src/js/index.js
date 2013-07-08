@@ -3,7 +3,20 @@ var weekArray = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday
 function createArticlePost(data) {
 	var imgpath = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGAQMAAADaAn0LAAAABlBMVEUAAADq4tjlUicxAAAAAXRSTlMAQObYZgAAABpJREFUeF4NwQENAAAIArBHMgbBCI67invRAQvcAfkcWtJIAAAAAElFTkSuQmCC";
 	if(data.content && data.content.indexOf("img") !== -1) {
-		imgpath = $(data.content).find("img").attr("src") || imgpath;
+		var pathArray = $.parseHTML(data.content).filter(function(dom) {
+			return (dom.nodeType === 1);
+		}).filter(function(dom) {
+			return dom.tagName.toLowerCase() === "img" || $(dom).find("img").length !== 0;
+		}).map(function(dom) {
+			if(dom.tagName.toLowerCase() === "img") {
+				return dom.src;
+			} else {
+				return $(dom).find("img").attr("src");
+			}
+		});
+		if(pathArray.length !== 0) {
+			imgpath = pathArray[0];
+		}
 	}
 	var date = new Date(data.publishedDate);
 	var dateString = date.getFullYear() + "." + ('0' + (date.getMonth() + 1)).slice(-2) + "." + ('0' + date.getDate()).slice(-2) + " " + weekArray[date.getDay()];
