@@ -18,7 +18,7 @@ function createArticlePost(data) {
 	html += 			'<time class="archive-postdate" datetime="' + date.toString() + '">' + dateString + '</time>';
 	html += 		'</header>';
 	html += 		'<p>' + data.contentSnippet + '</p>';
-	html += 		'<div class="archive-more">more&nbsp;&raquo;</div>';
+	html += 		'<div class="archive-more">続きを読む&nbsp;&raquo;</div>';
 	html += 	'</a>';
 	html += '</section>';
 	return html;
