@@ -8,11 +8,7 @@ function createArticlePost(data) {
 		}).filter(function(dom) {
 			return dom.tagName.toLowerCase() === "img" || $(dom).find("img").length !== 0;
 		}).map(function(dom) {
-			if(dom.tagName.toLowerCase() === "img") {
-				return dom.src;
-			} else {
-				return $(dom).find("img").attr("src");
-			}
+			return dom.tagName.toLowerCase() === "img" ? dom.src : $(dom).find("img").attr("src");
 		});
 		if(pathArray.length !== 0) {
 			imgpath = pathArray[0];
