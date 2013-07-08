@@ -132,7 +132,7 @@ input[type="text"] {
 	padding: 40px 0;
 }
 /* // ヘッダーのラッパー要素 */
-.header .wrapper {
+.header-wrapper {
 	display: table;
 	width: 100%;
 }
@@ -415,7 +415,7 @@ input[type="text"] {
 	color: #e1820b;
 }
 /* // フッターのラッパー要素 */
-.footer .wrapper {
+.footer-wrapper {
 	position: relative;
 	display: table;
 	table-layout: fixed;
