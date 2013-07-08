@@ -336,7 +336,7 @@ input[type="text"] {
 	border: 2px solid #fff;
 	width: 64px;
 	height: 64px;
-	margin: 0 10px 10px 0;
+	margin: 0 5px 10px 5px;
 	line-height: 0;
 	-webkit-box-shadow: 0 0 2px rgba(189,166,137,.5);
 	-moz-box-shadow: 0 0 2px rgba(189,166,137,.5);
