@@ -121,6 +121,9 @@ input[type="text"] {
 	max-width: 960px;
 	margin: 0 auto;
 }
+.outline-primary {
+	margin-bottom: 80px;
+}
 
 /*
  Global header グローバルヘッダー
@@ -186,6 +189,7 @@ input[type="text"] {
 	margin-bottom: 40px;
 }
 .display p {
+	font-size: 13px;
 	text-align: center;
 	margin: 0 10px;
 }
@@ -225,6 +229,7 @@ input[type="text"] {
 -------------------------------------------------------------------------------- */
 .archive {
 	display: table;
+	min-height: 540px;
 }
 .archive a {
 	display: block;
@@ -236,7 +241,7 @@ input[type="text"] {
 .archive-post {
 	background-color: #fffcf6;
 	width: 300px;
-	min-height: 260px;
+	min-height: 250px;
 	margin: 0 10px 20px;
 	float: left;
 	-webkit-box-shadow: 0 0 4px rgba(189,166,137,.5);
@@ -272,7 +277,7 @@ input[type="text"] {
 	display: block;
 	border-width: 2px;
 	width: 280px;
-	height: 120px;
+	height: 100px;
 	background-color: #eee7dc;
 	background-position: center;
 	margin-bottom: 15px;
@@ -392,7 +397,6 @@ input[type="text"] {
 	font-size: 13px;
 	background: #665d4e url(../images/bg-aside.png);
 	padding: 30px 0;
-	margin-top: 80px;
 	-webkit-box-shadow:  0 0 4px #bda689;
 	-moz-box-shadow:  0 0 4px #bda689;
 	box-shadow:  0 0 4px #bda689;
