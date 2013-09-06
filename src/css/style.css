@@ -329,7 +329,6 @@ input[type="text"] {
 -------------------------------------------------------------------------------- */
 .galleries {
 	padding: 10px;
-	letter-spacing: -.40em;
 }
 .galleries a {
 	float: left;
@@ -348,6 +347,9 @@ input[type="text"] {
 }
 .galleries a:hover {
 	border-color: #bda783;
+}
+.galleries img {
+	width: 100%;
 }
 
 /*
