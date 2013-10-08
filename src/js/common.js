@@ -26,7 +26,7 @@ $(function() {
 
   var facebookScript = createNode("script", {
     id: "facebook-jssdk",
-    src: "",
+    src: (/^http:/.test(document.location)?'http':'https') + "://connect.facebook.net/ja_JP/all.js#xfbml=1",
     defer: true
   });
 
