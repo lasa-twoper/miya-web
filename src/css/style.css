@@ -483,6 +483,7 @@ input[type="text"] {
 }
 .fb-like-box iframe {
 	background: #fff;
+	border-radius: 7px;
 }
 /* Copyright コピーライト
 ------------------------------------------------------------ */
