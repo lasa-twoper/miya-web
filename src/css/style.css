@@ -433,7 +433,7 @@ input[type="text"] {
 ------------------------------------------------------------ */
 .footer-section {
 	display: table-cell;
-	min-height: 200px;
+	min-height: 300px;
 }
 /* Footer headline フッターの見出し
 ------------------------------------------------------------ */
@@ -458,14 +458,14 @@ input[type="text"] {
 	width: 80px;
 	height: 80px;
 }
-/* Tweet...
+/* Social Content
 ------------------------------------------------------------ */
-.tweet {
+.social-content {
 	position: relative;
 	display: none;
 	padding-left: 40px;
 }
-.tweet:before {
+.social-content:before {
 	content: "";
 	position: absolute;
 	top: 50%;
@@ -477,9 +477,13 @@ input[type="text"] {
 }
 @media screen and (min-width:640px) {
 	/* // ウィンドウ幅640pxより大きいときに適用される */
-	.tweet {
+	.social-content {
 		display: block !important;
 	}
+}
+.fb-like-box iframe {
+	background: #fff;
+	border-radius: 7px;
 }
 /* Copyright コピーライト
 ------------------------------------------------------------ */
