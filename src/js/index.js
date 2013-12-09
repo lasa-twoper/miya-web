@@ -35,7 +35,8 @@ function createArticlePost(data) {
 
 $(function() {
 	var container = $("#js-archive-container");
-	var rss = "http://miya-illust.jugem.jp/?mode=rss";
+//	var rss = "http://miya-illust.jugem.jp/?mode=rss"; // jugem
+	var rss = "http://miya-info.tumblr.com/rss"; // tumblr
 	var count = 6;
 	var url = "https://ajax.googleapis.com/ajax/services/feed/load?v=1.0&q=" + rss + "&num=" + count;
 	$.ajax(url, {
