@@ -1,10 +1,15 @@
 $(function() {
-	// default
-	$(".boxer.boxer-default").boxer();
-	// fashion
-	$(".boxer.boxer-fashion").boxer({
+	$(".boxer").boxer({
 		formatter: function($target) {
-			return '<a href="' + $target.data("link") + '" target="_blank">&raquo;&nbsp;more...</a>';
+			var targetInfo = "",
+				title = $target.attr("title"),
+				links = $target.data("link");
+			if (title && links) {
+				targetInfo = '<a href="' + links + '" target="_blank">' + title + '</a>';
+			} else if (title) {
+				targetInfo = title;
+			}
+			return targetInfo;
 		}
 	});
 });
