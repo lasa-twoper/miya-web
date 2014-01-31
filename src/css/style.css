@@ -10,7 +10,9 @@
 body {
 	position: relative;
 	color: #606060;
-	font: 14px/1.231 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+/*	font: 14px/1.231 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif; */
+	font: 14px/1.231 Helvetica, "Helvetica Neue", Arial, "メイリオ", sans-serif;
+	letter-spacing: .05em;
 	background: #fcfaf0 url(../images/bg.png);
 }
 body:before {
@@ -150,9 +152,7 @@ input[type="text"] {
 	margin-top: 10px;
 }
 .globalnav a {
-	font-size: 13px;
-/*	font-family: 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', 'ＭＳ Ｐ明朝', 'MS PMincho';*/
-	font-weight: bold;
+	font: 14px/1.231 Helvetica, "Helvetica Neue", Arial, "メイリオ", sans-serif;
 }
 .globalnav ul {
 	display: table;
@@ -207,13 +207,24 @@ input[type="text"] {
 .display-thumbnail:before {
 	content: "";
 	position: absolute;
-	top: -24px;
+	top: -18px;
 	left: 50%;
 	margin-bottom: -4px;
-	margin-left: -79px;
-	background-image: url(../images/tape.png);
-	width: 158px;
-	height: 48px;
+	margin-left: -60px;
+	background: url(../images/tape.png) no-repeat;
+	background-size: 120px auto;
+	width: 120px;
+	height: 36px;
+}
+@media screen and (min-width:480px) {
+	/* // ウィンドウ幅480pxより大きいときに適用される */
+	.display-thumbnail:before {
+		top: -24px;
+		margin-left: -79px;
+		background: url(../images/tape.png) no-repeat;
+		width: 158px;
+		height: 48px;
+	}
 }
 .display-thumbnail:after {
 	content: "";
